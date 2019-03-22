@@ -75,5 +75,3 @@ class Individual:
         return vectorizeFeatures(getDataFrame())
         
         
-ben = Individual('bennxrris','ebe04e26779c4a9eb55c10141252f9bc','d2ef886427ee4ba18c82f2013e877d1a')
-ben_df = ben.getDataFrame()
