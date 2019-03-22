@@ -70,8 +70,5 @@ class Individual:
         """ Returns vector of average features for Individual's songs. """
         dataframe = self.getDataFrame()
         del dataframe['analysis_url'], dataframe['id'], dataframe['track_href'], dataframe['uri'], dataframe['type']
-        vector = []
-        for feature in dataframe:
-            vector.append(dataframe[feature].mean())
-        return np.array(vector)
+        return np.array([dataframe[feature].mean() for feature in dataframe])
         
