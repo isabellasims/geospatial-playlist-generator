@@ -1,1 +1,1 @@
-# Geospatial-Playlist-Generator
+# Geospatial Playlist Generator
