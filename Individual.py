@@ -30,7 +30,7 @@ class Individual:
         
     
     def getPlaylistID(self, playlist):
-        """ Returns ID of playlist passed object passed in. """
+        """ Returns ID of playlist object passed in. """
         return str(playlist['external_urls']).split("'")[3].split("/")[4]
         
         
