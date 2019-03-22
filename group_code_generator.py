@@ -1,8 +1,7 @@
-# generating randomized alphanumeric code of length 6
-def group_id(size=6, chars=(string.ascii_uppercase+string.digits)):
-    return ''.join(random.choice(chars) for _ in range(size))
+import random
+import string
 
-# testing function
-print(group_id(3))
-print(group_id())
-print(group_id(10))
+def group_id(size=6, chars=(string.ascii_uppercase+string.digits)):
+    """This function returns a randomized alphanumeric code of length 6. Length can be
+    overwritten by passing in integer argument of different value."""
+    return ''.join(random.choice(chars) for _ in range(size))
