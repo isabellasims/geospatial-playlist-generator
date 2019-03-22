@@ -35,7 +35,7 @@ class Individual:
         
         
     def getFeatures(self, connection, username, playlist_id):
-        """Returns a pandas dataframe of audio features every song in playlist object, up to 100 songs.
+        """Returns a pandas dataframe of every song's audio features in playlist object, up to 100 songs per playlist.
         Function takes three arguments: Spotify connection object (variable name), Spotify username (string),
         and playlist ID (string)."""
         song_ids = []
