@@ -1,6 +1,5 @@
 import spotipy
 import spotipy.util as util
-from spotipy.oauth2 import SpotifyClientCredentials
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -24,22 +23,6 @@ class Individual:
         if token:
             return spotipy.Spotify(auth=token)
         
-        else:
-            return 'Unable to establish connection.'
-        
-        
-    def connect2(self):
-        cid = "ebe04e26779c4a9eb55c10141252f9bc" 
-        secret = "d2ef886427ee4ba18c82f2013e877d1a"
-        username = self.username
-        
-        client_credentials_manager = SpotifyClientCredentials(client_id=cid, client_secret=secret) 
-        sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
-        
-        scope = 'playlist-modify-public'
-        token = util.prompt_for_user_token(username, scope)
-        if token:
-            return spotipy.Spotify(auth=token)
         else:
             return 'Unable to establish connection.'
         
